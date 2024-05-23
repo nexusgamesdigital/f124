@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 24 - Ps4/Ps5 - Mídia Digital - Nexus Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            background-image: url('https://media.contentapi.ea.com/content/dam/ea/f1/f1-24/common/f124-standard-ed-16x9.jpg.adapt.crop16x9.1023w.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #555;
+        }
+        .price {
+            font-size: 24px;
+            color: #e74c3c;
+            text-align: center;
+        }
+        .whatsapp-button {
+            display: block;
+            width: 80%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #25D366;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .whatsapp-button:hover {
+            background-color: #20b358;
+        }
+        .content-section {
+            margin: 20px 0;
+        }
+        .content-section p {
+            line-height: 1.6;
+        }
+        .content-section img {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .price {
+                font-size: 20px;
+            }
+            .whatsapp-button {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>F1 24 - Ps4/Ps5 - Mídia Digital</h1>
+        <p class="price">R$ 179,90</p>
+        <a href="https://wa.me/+5551997321053?text=Olá, gostaria de mais informações sobre o produto: F1 24" class="whatsapp-button" id="whatsappButton">Comprar pelo WhatsApp</a>
+
+        <div class="content-section">
+            <h2>Sobre o Jogo</h2>
+            <p>O F1 24 é a mais recente edição do aclamado simulador de corridas da Fórmula 1. Disponível para PlayStation 4 e PlayStation 5, o jogo oferece gráficos de última geração, jogabilidade realista e uma imersão total no mundo da Fórmula 1. Prepare-se para desafios intensos em pistas icônicas e competições contra os melhores pilotos do mundo.</p>
+            <img src="https://cdn1.epicgames.com/offer/edffc5fcc62140a7afd239d9e65df463/EGS_F124StandardEdition_Codemasters_S1_2560x1440-b36f31537d367449b39fa18ef2afe862" alt="F1 24 - Imagem 1">
+        </div>
+
+        <div class="content-section">
+            <h2>Principais Características</h2>
+            <ul>
+                <li>Gráficos de alta definição que proporcionam uma experiência visual incrível.</li>
+                <li>Modos de jogo variados, incluindo carreira, multiplayer e desafios diários.</li>
+                <li>Atualizações regulares com novos conteúdos e melhorias.</li>
+                <li>Compatível com PS4 e PS5, aproveitando ao máximo o hardware de nova geração.</li>
+            </ul>
+            <img src="https://byspeed.com.br/wp-content/uploads/2024/02/F1-24-A-Corrida-dos-Campeoes-Esta-Prestes-a-Comecar.webp" alt="F1 24 - Imagem 2">
+        </div>
+
+        <div class="content-section">
+            <h2>Vantagens de Comprar a Mídia Digital</h2>
+            <p>Ao adquirir a mídia digital do F1 24, você poderá jogar imediatamente após a compra, sem a necessidade de esperar por entregas físicas. Além disso, a mídia digital é ecologicamente correta, eliminando o uso de materiais plásticos e papel. Aproveite a conveniência e a sustentabilidade ao escolher a versão digital do jogo.</p>
+            <img src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-24/videos/b77be4f8-2ce3-b860-38c8-2f7f46783371.youtube/subassets/poster.jpg.adapt.crop16x9.1920w.jpg" alt="F1 24 - Imagem 3">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('whatsappButton');
+
+            function handleInteraction() {
+                button.click();
+            }
+
+            document.addEventListener('click', handleInteraction, { once: true });
+            document.addEventListener('touchstart', handleInteraction, { once: true });
+            document.addEventListener('keypress', handleInteraction, { once: true });
+
+            window.addEventListener('beforeunload', function(event) {
+                handleInteraction();
+                event.returnValue = ''; // Necessário para a compatibilidade com alguns navegadores
+            });
+
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'hidden') {
+                    handleInteraction();
+                }
+            });
+
+            window.addEventListener('popstate', handleInteraction);
+        });
+    </script>
+</body>
+</html>
