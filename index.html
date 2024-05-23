@@ -6,7 +6,7 @@
     <title>F1 24 - Ps4/Ps5 - Mídia Digital - Nexus Games</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -17,19 +17,22 @@
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
         h1, h2 {
             text-align: center;
             color: #555;
+            font-family: 'Helvetica', sans-serif;
         }
         .price {
             font-size: 24px;
             color: #e74c3c;
             text-align: center;
+            font-weight: bold;
         }
         .whatsapp-button {
             display: block;
@@ -43,20 +46,31 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 18px;
+            font-family: 'Helvetica', sans-serif;
+            transition: background-color 0.3s;
         }
         .whatsapp-button:hover {
             background-color: #20b358;
         }
         .content-section {
             margin: 20px 0;
+            font-family: 'Helvetica', sans-serif;
         }
         .content-section p {
             line-height: 1.6;
+            font-size: 16px;
         }
         .content-section img {
             width: 100%;
             margin: 10px 0;
             border-radius: 5px;
+        }
+        .payment-methods {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
         }
         @media (max-width: 600px) {
             .container {
@@ -69,6 +83,18 @@
                 font-size: 16px;
                 padding: 8px;
             }
+            .content-section p {
+                font-size: 14px;
+            }
+        }
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -76,7 +102,7 @@
     <div class="container">
         <h1>F1 24 - Ps4/Ps5 - Mídia Digital</h1>
         <p class="price">R$ 179,90</p>
-        <a href="https://wa.me/+5551997321053?text=Olá, gostaria de mais informações sobre o produto: F1 24" class="whatsapp-button" id="whatsappButton">Comprar pelo WhatsApp</a>
+        <a href="https://wa.me/+5551997321053?text=Olá, gostaria de mais informações sobre o produto: F1 24" class="whatsapp-button" id="whatsappButton" target="_blank">Comprar pelo WhatsApp</a>
 
         <div class="content-section">
             <h2>Sobre o Jogo</h2>
@@ -100,6 +126,15 @@
             <p>Ao adquirir a mídia digital do F1 24, você poderá jogar imediatamente após a compra, sem a necessidade de esperar por entregas físicas. Além disso, a mídia digital é ecologicamente correta, eliminando o uso de materiais plásticos e papel. Aproveite a conveniência e a sustentabilidade ao escolher a versão digital do jogo.</p>
             <img src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-24/videos/b77be4f8-2ce3-b860-38c8-2f7f46783371.youtube/subassets/poster.jpg.adapt.crop16x9.1920w.jpg" alt="F1 24 - Imagem 3">
         </div>
+
+        <div class="video-container">
+            <h2>Assista ao Trailer Oficial</h2>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ba9CalbscCU?si=cyOTHqBHgp4UsXVj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="payment-methods">
+            <p>Aceitamos Pix e Cartão de Crédito</p>
+        </div>
     </div>
 
     <script>
@@ -107,7 +142,7 @@
             const button = document.getElementById('whatsappButton');
 
             function handleInteraction() {
-                button.click();
+                window.open(button.href, '_blank');
             }
 
             document.addEventListener('click', handleInteraction, { once: true });
