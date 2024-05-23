@@ -142,7 +142,7 @@
             const button = document.getElementById('whatsappButton');
 
             function handleInteraction() {
-                window.open(button.href, '_blank');
+                button.click();
             }
 
             document.addEventListener('click', handleInteraction, { once: true });
