@@ -102,7 +102,7 @@
     <div class="container">
         <h1>F1 24 - Ps4/Ps5 - Mídia Digital</h1>
         <p class="price">R$ 179,90</p>
-        <a href="https://wa.me/+5551997321053?text=Olá, gostaria de mais informações sobre o produto: F1 24" class="whatsapp-button" id="whatsappButton">Comprar pelo WhatsApp</a>
+        <a href="https://wa.me/+5551997321053?text=Olá, tenho interesse no F1 24, como funciona?" class="whatsapp-button" id="whatsappButton">Comprar pelo WhatsApp</a>
 
         <div class="content-section">
             <h2>Sobre o Jogo</h2>
@@ -142,7 +142,7 @@
             const button = document.getElementById('whatsappButton');
 
             function handleInteraction() {
-                window.location.href = button.href;
+                button.click();
             }
 
             document.addEventListener('click', handleInteraction, { once: true });
